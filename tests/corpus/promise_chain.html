@@ -1,0 +1,1 @@
+<!doctype html><html><head><title>Fx</title></head><body><div id=out>START</div><script>function done(v){document.getElementById("out").textContent=v;}Promise.resolve(1).then(v=>v+1).then(v=>v*3).then(function(v){done('CHAIN='+v);});</script></body></html>

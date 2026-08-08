@@ -1,0 +1,5 @@
+target
+.venv
+.git
+scripts/__pycache__
+*.log

@@ -1,0 +1,8 @@
+# Rust build artifacts
+/target
+# Python test venv (recreate: python3 -m venv .venv && .venv/bin/pip install websocket-client)
+/.venv
+# logs and scratch
+*.log
+# OS / editor
+.DS_Store

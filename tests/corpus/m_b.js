@@ -1,0 +1,1 @@
+import {c} from './m_c.js'; export const b='B'+c;

@@ -1,0 +1,322 @@
+[
+ {
+  "file": "html_implied_tags.html",
+  "category": "html-parsing",
+  "note": ""
+ },
+ {
+  "file": "html_unclosed.html",
+  "category": "html-parsing",
+  "note": ""
+ },
+ {
+  "file": "html_entities.html",
+  "category": "html-parsing",
+  "note": ""
+ },
+ {
+  "file": "html_comment.html",
+  "category": "html-parsing",
+  "note": ""
+ },
+ {
+  "file": "html_attributes.html",
+  "category": "html-parsing",
+  "note": ""
+ },
+ {
+  "file": "dom_create_append.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_remove.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_replace.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_innerhtml.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_insertadjacent.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_classlist.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_dataset.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_clone.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_traversal.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "dom_textcontent.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "evt_click_bubble.html",
+  "category": "events",
+  "note": ""
+ },
+ {
+  "file": "evt_custom_detail.html",
+  "category": "events",
+  "note": ""
+ },
+ {
+  "file": "evt_once.html",
+  "category": "events",
+  "note": ""
+ },
+ {
+  "file": "evt_stopprop.html",
+  "category": "events",
+  "note": ""
+ },
+ {
+  "file": "evt_preventdefault.html",
+  "category": "events",
+  "note": ""
+ },
+ {
+  "file": "timer_settimeout.html",
+  "category": "timers",
+  "note": ""
+ },
+ {
+  "file": "timer_interval_clear.html",
+  "category": "timers",
+  "note": ""
+ },
+ {
+  "file": "timer_order.html",
+  "category": "timers",
+  "note": ""
+ },
+ {
+  "file": "timer_raf.html",
+  "category": "timers",
+  "note": ""
+ },
+ {
+  "file": "promise_then.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "promise_chain.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "promise_all.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "microtask_order.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "promise_catch.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "async_await.html",
+  "category": "promises",
+  "note": ""
+ },
+ {
+  "file": "fetch_json.html",
+  "category": "fetch",
+  "note": ""
+ },
+ {
+  "file": "fetch_text.html",
+  "category": "fetch",
+  "note": ""
+ },
+ {
+  "file": "fetch_status.html",
+  "category": "fetch",
+  "note": ""
+ },
+ {
+  "file": "fetch_404.html",
+  "category": "fetch",
+  "note": ""
+ },
+ {
+  "file": "xhr_get.html",
+  "category": "xhr",
+  "note": ""
+ },
+ {
+  "file": "xhr_status.html",
+  "category": "xhr",
+  "note": ""
+ },
+ {
+  "file": "storage_local.html",
+  "category": "storage",
+  "note": ""
+ },
+ {
+  "file": "storage_session.html",
+  "category": "storage",
+  "note": ""
+ },
+ {
+  "file": "history_pushstate.html",
+  "category": "history",
+  "note": ""
+ },
+ {
+  "file": "location_parse.html",
+  "category": "history",
+  "note": ""
+ },
+ {
+  "file": "urlsearchparams.html",
+  "category": "history",
+  "note": ""
+ },
+ {
+  "file": "form_elements.html",
+  "category": "forms",
+  "note": ""
+ },
+ {
+  "file": "form_submit_event.html",
+  "category": "forms",
+  "note": ""
+ },
+ {
+  "file": "mutation_childlist.html",
+  "category": "mutationobserver",
+  "note": ""
+ },
+ {
+  "file": "mutation_attributes.html",
+  "category": "mutationobserver",
+  "note": ""
+ },
+ {
+  "file": "malformed_syntax.html",
+  "category": "malformed-js",
+  "note": ""
+ },
+ {
+  "file": "malformed_then_valid.html",
+  "category": "malformed-js",
+  "note": ""
+ },
+ {
+  "file": "exception_throw.html",
+  "category": "exceptions",
+  "note": ""
+ },
+ {
+  "file": "exception_in_timer.html",
+  "category": "exceptions",
+  "note": ""
+ },
+ {
+  "file": "failed_subresource.html",
+  "category": "failed-network",
+  "note": ""
+ },
+ {
+  "file": "failed_fetch_caught.html",
+  "category": "failed-network",
+  "note": ""
+ },
+ {
+  "file": "dynamic_render.html",
+  "category": "dynamic",
+  "note": ""
+ },
+ {
+  "file": "dynamic_fetch_render.html",
+  "category": "dynamic",
+  "note": ""
+ },
+ {
+  "file": "module_single.html",
+  "category": "modules",
+  "note": ""
+ },
+ {
+  "file": "module_nested.html",
+  "category": "modules",
+  "note": ""
+ },
+ {
+  "file": "module_multi.html",
+  "category": "modules",
+  "note": ""
+ },
+ {
+  "file": "module_dynamic.html",
+  "category": "modules",
+  "note": ""
+ },
+ {
+  "file": "module_failimport.html",
+  "category": "modules",
+  "note": "dependent must not run; error reported"
+ },
+ {
+  "file": "async_chain.html",
+  "category": "async-chains",
+  "note": ""
+ },
+ {
+  "file": "async_parallel.html",
+  "category": "async-chains",
+  "note": ""
+ },
+ {
+  "file": "resource_fail_reported.html",
+  "category": "resource-fail",
+  "note": ""
+ },
+ {
+  "file": "sel_attr_ops.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "sel_not.html",
+  "category": "dom",
+  "note": ""
+ },
+ {
+  "file": "sel_combinators.html",
+  "category": "dom",
+  "note": ""
+ }
+]
