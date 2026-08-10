@@ -13,8 +13,41 @@ use std::time::{Duration, Instant};
 
 static V8_INIT: Once = Once::new();
 
+/// Load ICU common data before V8 starts. Without it, any Intl-backed call a
+/// page makes (`toLocaleTimeString`, `Intl.DateTimeFormat`, …) is a V8 FATAL
+/// that aborts the whole process (kernel `trap int3`) — a job must never be
+/// able to do that. Data path: $FALCON_ICU_DATA, else the vendored file.
+/// Missing/mismatched data degrades gracefully: we log and continue, and only
+/// Intl-dependent pages fail (as they did before), instead of crashing.
+fn init_icu() {
+    let path = std::env::var("FALCON_ICU_DATA").unwrap_or_else(|_| {
+        concat!(env!("CARGO_MANIFEST_DIR"), "/third_party/icu/icudt74l.dat").to_string()
+    });
+    let raw = match std::fs::read(&path) {
+        Ok(b) => b,
+        Err(e) => {
+            eprintln!("falcon: ICU data not loaded ({path}: {e}); Intl-dependent pages will error");
+            return;
+        }
+    };
+    // ICU requires the data to be 16-aligned; Vec<u8> gives no such guarantee,
+    // so copy into an explicitly aligned, leaked buffer (one-time, process-wide).
+    let layout = std::alloc::Layout::from_size_align(raw.len(), 16).expect("icu layout");
+    let data: &'static [u8] = unsafe {
+        let ptr = std::alloc::alloc(layout);
+        assert!(!ptr.is_null(), "icu alloc");
+        std::ptr::copy_nonoverlapping(raw.as_ptr(), ptr, raw.len());
+        std::slice::from_raw_parts(ptr, raw.len())
+    };
+    match v8::icu::set_common_data_74(data) {
+        Ok(()) => eprintln!("falcon: ICU data loaded from {path}"),
+        Err(code) => eprintln!("falcon: ICU data rejected (code {code}, {path}); Intl-dependent pages will error"),
+    }
+}
+
 pub fn init_v8() {
     V8_INIT.call_once(|| {
+        init_icu();
         let platform = v8::new_default_platform(0, false).make_shared();
         v8::V8::initialize_platform(platform);
         v8::V8::initialize();
